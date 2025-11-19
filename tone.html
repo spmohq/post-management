@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tone / Style — Usage & Platforms (Responsive)</title>
+  <style>
+    :root{
+      --maxw:960px;
+      --muted:#586069;
+      --accent:#0b5fff;
+      --gap:16px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:#ffffff;
+      color:#0b0b0b;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:24px 16px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+    }
+    .wrap{
+      width:100%;
+      max-width:var(--maxw);
+    }
+    header{
+      margin-bottom:12px;
+      display:flex;
+      align-items:baseline;
+      gap:12px;
+    }
+    h1{
+      font-size:18px;
+      margin:0;
+      font-weight:600;
+    }
+    p.lead{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Table base */
+    .table-wrap{
+      background:#fff;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 1px 0 rgba(11,11,11,0.04);
+      border:1px solid rgba(11,11,11,0.06);
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      min-width:600px; /* helps desktop layout */
+    }
+    thead{
+      background:transparent;
+    }
+    th{
+      text-align:left;
+      font-size:12px;
+      padding:14px 16px;
+      color:var(--muted);
+      font-weight:600;
+      border-bottom:1px solid rgba(11,11,11,0.06);
+      letter-spacing:0.01em;
+    }
+    td{
+      padding:14px 16px;
+      vertical-align:top;
+      font-size:14px;
+      border-bottom:1px dashed rgba(11,11,11,0.04);
+    }
+    tr:last-child td{border-bottom:0}
+
+    /* Narrow screens: make rows into cards */
+    @media (max-width:720px){
+      table{min-width:0;border-collapse:separate;border-spacing:0;}
+      thead{display:none}
+      tr{display:block;border-bottom:12px solid transparent;padding:0}
+      td{
+        display:block;
+        padding:12px 16px;
+        border-bottom:0;
+        background:transparent;
+      }
+      td:first-child{
+        font-weight:700;
+        font-size:15px;
+        color:#0b0b0b;
+        padding-top:16px;
+      }
+      td + td{
+        color:var(--muted);
+        padding-bottom:16px;
+      }
+      .table-wrap{box-shadow:none;border:0}
+    }
+
+    /* Slight visual polish for desktop */
+    @media (min-width:721px){
+      th:first-child, td:first-child{width:28%;}
+      th:nth-child(2), td:nth-child(2){width:72%;}
+    }
+
+    footer{
+      margin-top:12px;
+      display:flex;
+      justify-content:flex-end;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Utility */
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; font-size:12px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Tone / Style — Usage & Platforms</h1>
+        <p class="lead">Minimal, mobile-responsive table showing when to use each tone and which platforms fit best.</p>
+      </div>
+    </header>
+
+    <div class="table-wrap" role="region" aria-label="Tone and platform table">
+      <table>
+        <thead>
+          <tr>
+            <th>Tone / Style</th>
+            <th>When to use — Platforms</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Peer-review Journal tone</td>
+            <td>Scientific research, academic results — Elsevier, Springer, IEEE, ResearchGate</td>
+          </tr>
+
+          <tr>
+            <td>APA-style tone</td>
+            <td>Citation-heavy social science writing, theses — University submissions, academic journals</td>
+          </tr>
+
+          <tr>
+            <td>Systematic Review–style</td>
+            <td>Large literature syntheses, evidence summaries — PubMed, Cochrane, review journals</td>
+          </tr>
+
+          <tr>
+            <td>Academic Journal tone</td>
+            <td>Scholarly research and debate — Academia.edu, Google Scholar, journals</td>
+          </tr>
+
+          <tr>
+            <td>McKinsey tone</td>
+            <td>Strategy, consulting insights, executive briefs — LinkedIn, consulting reports, corporate decks</td>
+          </tr>
+
+          <tr>
+            <td>The Economist tone</td>
+            <td>Global affairs, economics, high-brow opinion — Premium newsletters, Medium, LinkedIn</td>
+          </tr>
+
+          <tr>
+            <td>Emotional tone</td>
+            <td>Storytelling, personal narratives, motivation — Facebook, Instagram, blogs, YouTube scripts</td>
+          </tr>
+
+          <tr>
+            <td>Suspense-driven tone</td>
+            <td>Hooks, dramatic narratives, fiction — Blogs, YouTube storytelling, email campaigns</td>
+          </tr>
+
+          <tr>
+            <td>Premium Academic tone</td>
+            <td>Elite academic audiences, policy, high-level analysis — Whitepapers, government reports, Ivy League outputs</td>
+          </tr>
+
+          <tr>
+            <td>Exclusive Inner-circle tone</td>
+            <td>VIP groups and paid subscribers — Private Telegram/Discord, Substack premium</td>
+          </tr>
+
+          <tr>
+            <td>Masterclass tone</td>
+            <td>Advanced teaching and skill instruction — Online courses, webinars, learning platforms</td>
+          </tr>
+
+          <tr>
+            <td>Exclusive Cohort Invitation tone</td>
+            <td>Bootcamp and cohort launches — Email campaigns, private landing pages</td>
+          </tr>
+
+          <tr>
+            <td>Letter from the Mentor’s Desk tone</td>
+            <td>Personal advisory and mentor notes — Newsletters, mentorship program pages</td>
+          </tr>
+
+          <tr>
+            <td>Exclusive Mentorship Edition tone</td>
+            <td>Closed-community insights — Private newsletters, cohort platforms (Circle, Skool)</td>
+          </tr>
+
+          <tr>
+            <td>Editorial-style writing</td>
+            <td>Opinion pieces and features — Medium, newspapers, magazines</td>
+          </tr>
+
+          <tr>
+            <td>Harvard Business Review tone</td>
+            <td>Leadership and business strategy — LinkedIn, business blogs, corporate insights</td>
+          </tr>
+
+          <tr>
+            <td>Premium Newsletter tone</td>
+            <td>Paid members-only analysis — Substack, Beehiiv, Mailchimp premium</td>
+          </tr>
+
+          <tr>
+            <td>Case-study style edition</td>
+            <td>Business case breakdowns and before/after analysis — Business schools, LinkedIn, corporate training</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <div class="mono">Minimal • Responsive • White background</div>
+    </footer>
+  </div>
+</body>
+</html>
