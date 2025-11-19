@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Platform DM / Posting Summary</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:#ffffff;color:#000000;margin:0;line-height:1.5}
+    .wrap{max-width:980px;margin:28px auto;padding:18px;}
+    header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+    .logo{width:48px;height:48px;border-radius:10px;background:#000000;color:#ffffff;display:flex;align-items:center;justify-content:center;font-weight:700;}
+    .card{background:#f9f9f9;padding:14px;border-radius:12px;border:1px solid #e0e0e0;}
+
+    .table-wrap{overflow:auto;border-radius:8px;border:1px solid #ddd;background:#ffffff;}
+    table{width:100%;border-collapse:collapse;min-width:820px}
+    thead th{background:#f0f0f0;padding:12px 14px;text-align:left;font-size:.9rem;color:#000;border-bottom:1px solid #ccc;}
+    tbody td{padding:12px 14px;border-top:1px solid #eee;font-size:0.95rem;color:#000000}
+    tbody tr:nth-child(even){background:#fafafa}
+
+    @media (max-width:700px){
+      table{min-width:0}
+      thead{display:none}
+      tbody td{display:block;padding:10px 12px;border-top:1px solid #eee}
+      tbody td::before{content:attr(data-label);display:block;font-weight:600;color:#555;margin-bottom:6px;font-size:0.85rem}
+      tbody tr{display:block;margin-bottom:10px;background:#ffffff;border:1px solid #ddd;padding:12px;border-radius:8px}
+    }
+
+    .note{margin-top:14px;padding:12px;border-radius:8px;background:#fff7d6;border:1px solid #f0d98a}
+    .note p{margin:0;color:#000}
+
+    footer{margin-top:16px;color:#555;font-size:0.85rem;text-align:center}
+
+    .controls{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}
+    button.copy{background:#ffffff;border:1px solid #555;color:#000;padding:8px 10px;border-radius:8px;font-weight:600;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">SP</div>
+      <div>
+        <h1>Platform posting &amp; DM summary</h1>
+        <p class="lead">Quick reference: which platforms support timeline posts, long‑form content, sharing, commenting and DMs.</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="table-wrap" role="region" aria-label="Platforms table">
+        <table>
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Timeline Post</th>
+              <th>Serious Content</th>
+              <th>Share of Others' Post</th>
+              <th>Comment</th>
+              <th>DM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Platform">Facebook (Timeline)</td>
+              <td data-label="Timeline Post">Yes</td>
+              <td data-label="Serious Content">Yes</td>
+              <td data-label="Share of Others' Post">Yes</td>
+              <td data-label="Comment">Yes</td>
+              <td data-label="DM">Yes (Messenger)</td>
+            </tr>
+
+            <tr>
+              <td data-label="Platform">Facebook Groups (others')</td>
+              <td data-label="Timeline Post">Depends on group rules</td>
+              <td data-label="Serious Content">Possible</td>
+              <td data-label="Share of Others' Post">Depends on group rules</td>
+              <td data-label="Comment">Yes</td>
+              <td data-label="DM">Not typical (Messenger used)</td>
+            </tr>
+
+            <tr>
+              <td data-label="Platform">Twitter</td>
+              <td data-label="Timeline Post">Yes (Tweets)</td>
+              <td data-label="Serious Content">Yes (Threads / long posts)</td>
+              <td data-label="Share of Others' Post">Yes (Retweet / Quote)</td>
+              <td data-label="Comment">Yes</td>
+              <td data-label="DM">Yes</td>
+            </tr>
+
+            <tr>
+              <td data-label="Platform">Substack</td>
+              <td data-label="Timeline Post">No typical timeline; publish posts</td>
+              <td data-label="Serious Content">Yes (Essays / Newsletters)</td>
+              <td data-label="Share of Others' Post">Yes (via links in posts)</td>
+              <td data-label="Comment">Yes</td>
+              <td data-label="DM">Limited / Not primary (reply to email goes to your inbox)</td>
+            </tr>
+
+            <tr>
+              <td data-label="Platform">Reddit</td>
+              <td data-label="Timeline Post">No timeline; posts in subreddits</td>
+              <td data-label="Serious Content">Yes (depending on subreddit)</td>
+              <td data-label="Share of Others' Post">Yes (Cross-post or link)</td>
+              <td data-label="Comment">Yes</td>
+              <td data-label="DM">Yes (Chat/PM)</td>
+            </tr>
+
+            <tr>
+              <td data-label="Platform">Medium</td>
+              <td data-label="Timeline Post">No timeline; publish articles</td>
+              <td data-label="Serious Content">Yes (Long-form articles)</td>
+              <td data-label="Share of Others' Post">Yes (Linking)</td>
+              <td data-label="Comment">Yes</td>
+              <td data-label="DM">No real DM</td>
+            </tr>
+
+            <tr>
+              <td data-label="Platform">WhatsApp</td>
+              <td data-label="Timeline Post">Status / Channel posts</td>
+              <td data-label="Serious Content">Yes (Groups / Broadcast)</td>
+              <td data-label="Share of Others' Post">Forwarding possible</td>
+              <td data-label="Comment">Yes</td>
+              <td data-label="DM">Yes (primary usage)</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="controls">
+        <button class="copy" id="copyBtn">Copy HTML to clipboard</button>
+      </div>
+
+      <div class="note" aria-live="polite">
+        <p><span class="strong">Short answer:</span> You cannot reliably ask readers to "DM" you on Substack or Medium, because neither platform provides a traditional, dependable in‑site direct‑message inbox.</p>
+        <p style="margin-top:8px;color:var(--muted)">Recommended alternatives: ask readers to <strong>reply to the Substack email</strong> (goes to your email inbox), or put a clear contact link on your Medium profile / article asking readers to reach you by email, website contact form, or your preferred social channel.</p>
+      </div>
+
+    </div>
+
+    <footer>Want the same file as a downloadable .html or a simplified copy (Ö/NA style)? Tell me which and I’ll prepare it.</footer>
+  </div>
+
+  <script>
+    document.getElementById('copyBtn').addEventListener('click', async function(){
+      try{
+        const html = document.documentElement.outerHTML;
+        await navigator.clipboard.writeText(html);
+        this.textContent = 'Copied!';
+        setTimeout(()=> this.textContent = 'Copy HTML to clipboard', 1800);
+      }catch(e){
+        alert('Copy failed — you can select and copy the page source manually.');
+      }
+    });
+  </script>
+</body>
+</html>
