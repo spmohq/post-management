@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Platforms & Uses — Categorized (Responsive)</title>
+  <style>
+    :root{
+      --maxw:980px;
+      --muted:#6b7280;
+      --accent:#0b5fff;
+      --gap:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:#fff;
+      color:#0b0b0b;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:22px 14px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+    header{
+      margin-bottom:12px;
+    }
+    h1{
+      font-size:18px;
+      margin:0 0 6px 0;
+      font-weight:600;
+    }
+    p.lead{margin:0;color:var(--muted);font-size:13px}
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:18px;
+    }
+    .card{
+      background:#ffffff;
+      border:1px solid rgba(11,11,11,0.06);
+      border-radius:10px;
+      padding:14px;
+      box-shadow:0 1px 0 rgba(11,11,11,0.03);
+    }
+    .card h2{
+      font-size:14px;
+      margin:0 0 8px 0;
+      font-weight:700;
+    }
+    ul{margin:0;padding:0 0 0 18px}
+    li{margin:8px 0;color:#111827;font-size:14px}
+    li.small{color:var(--muted);font-size:13px}
+
+    /* Responsive: single column on small screens */
+    @media (max-width:700px){
+      .grid{grid-template-columns:1fr}
+      body{padding:18px 12px}
+      h1{font-size:16px}
+    }
+
+    footer{margin-top:14px;display:flex;justify-content:flex-end;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <h1>Platforms & Uses — Categorized</h1>
+      <p class="lead">আগের তালিকা অনুযায়ী Platforms এবং Uses‑কে ক্যাটেগরি করে সাজানো (মোবাইল‑রেসপন্সিভ, মিনিমাল)</p>
+    </header>
+
+    <div class="grid">
+      <div class="card" aria-labelledby="platforms">
+        <h2 id="platforms">Platforms (Categorized)</h2>
+
+        <h3 class="small">A. Academic & Research</h3>
+        <ul>
+          <li>Elsevier</li>
+          <li>Springer</li>
+          <li>IEEE</li>
+          <li>ResearchGate</li>
+          <li>Academic journals</li>
+          <li>University submissions</li>
+          <li>PubMed</li>
+          <li>Cochrane</li>
+          <li>Review journals</li>
+          <li>Academia.edu</li>
+          <li>Google Scholar</li>
+          <li>Ivy League publications</li>
+          <li>Business schools</li>
+        </ul>
+
+        <h3 class="small">B. Corporate & Business</h3>
+        <ul>
+          <li>LinkedIn</li>
+          <li>Consulting reports</li>
+          <li>Corporate decks</li>
+          <li>Business blogs</li>
+          <li>Corporate training environments</li>
+        </ul>
+
+        <h3 class="small">C. Newsletters & Premium Publishing</h3>
+        <ul>
+          <li>Premium newsletters</li>
+          <li>Substack premium</li>
+          <li>Beehiiv</li>
+          <li>Mailchimp premium</li>
+          <li>Private newsletters</li>
+        </ul>
+
+      </div>
+
+      <div class="card" aria-labelledby="uses">
+        <h2 id="uses">Uses (Categorized)</h2>
+
+        <h3 class="small">A. Academic & Research Uses</h3>
+        <ul>
+          <li>Scientific research</li>
+          <li>Academic results</li>
+          <li>Citation‑heavy writing</li>
+          <li>Thesis writing</li>
+          <li>Large literature synthesis</li>
+          <li>Evidence summaries</li>
+          <li>Scholarly debate</li>
+          <li>Policy writing</li>
+          <li>High‑level academic analysis</li>
+        </ul>
+
+        <h3 class="small">B. Business, Strategy & Leadership Uses</h3>
+        <ul>
+          <li>Strategy insights</li>
+          <li>Consulting insights</li>
+          <li>Executive briefing</li>
+          <li>Leadership insights</li>
+          <li>Business strategy explanation</li>
+          <li>Case study breakdowns</li>
+          <li>Before/after analysis</li>
+        </ul>
+
+        <h3 class="small">C. Storytelling & Creative Uses</h3>
+        <ul>
+          <li>Storytelling</li>
+          <li>Personal narratives</li>
+          <li>Motivational writing</li>
+          <li>Dramatic storytelling</li>
+          <li>Suspense‑driven hooks</li>
+        </ul>
+
+        <h3 class="small">D. Community, Mentorship & Cohort Uses</h3>
+        <ul>
+          <li>Mentor‑style personal advisory</li>
+          <li>Closed‑community insights</li>
+          <li>VIP audience communication</li>
+          <li>Paid subscriber communication</li>
+          <li>Cohort invitations</li>
+          <li>Bootcamp announcements</li>
+        </ul>
+
+        <h3 class="small">E. Editorial & Opinion Uses</h3>
+        <ul>
+          <li>Opinion pieces</li>
+          <li>Editorial writing</li>
+          <li>Global analysis</li>
+          <li>Economic commentary</li>
+        </ul>
+
+        <h3 class="small">F. Teaching & Skill Development Uses</h3>
+        <ul>
+          <li>Advanced teaching</li>
+          <li>Skill instruction</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <footer>
+      <div style="color:var(--muted);font-size:13px">Minimal • Mobile‑first • White background</div>
+    </footer>
+  </div>
+</body>
+</html>
